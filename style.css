@@ -1,3 +1,7 @@
+body {
+    background-color: #F2A0DC;
+}
+
 .container{
     height: 100vh;
     display: flex;
@@ -6,6 +10,7 @@
 }
 
 .calculator-body{
+    background-color: #272932;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -18,6 +23,7 @@
 
 .calculator-display{
     border: 5px solid black;
+    background-color: #8ddbe0;
     width: 450px;
     height: 150px;
     display: flex;
@@ -42,4 +48,19 @@ button {
     flex: 1 0 22%;
     margin: 5px;
     height: 75px;
+    color: white;
+    font-family: 'Press Play 2P', monospace, system-ui;
+    font-size: 30px;
+}
+
+.operation{
+    background-color: #8C0F31;
+}
+
+.symbol{
+    background-color: #D92332;
+}
+
+.number-button{
+    background-color: #D93D76;
 }
