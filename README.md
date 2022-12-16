@@ -6,4 +6,5 @@ Build status - Started...
 
 Devlog:- (Dates in DD/MM/YYYY format)
 
-Started: [18/11/2022]
+Started: [18/11/2022]  
+Graphics Created (Background, Calculator, Stickers): [16/12/2022]
