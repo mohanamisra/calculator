@@ -1,11 +1,12 @@
 body {
     background-color: #F2A0DC;
+    background-image: url("images/background.png");
 }
 
 .container{
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -63,4 +64,31 @@ button {
 
 .number-button{
     background-color: #D93D76;
+}
+
+.sticker {
+    position: fixed;
+}
+
+.mom{
+    width: 400px;
+    top: -50px;
+    left: -50px;
+}
+
+.duo{
+    bottom: -50px;
+    left: 10px;
+}
+
+.karen {
+    width: 450px;
+    right: -50px;
+    top: -10px;
+}
+
+.damien {
+    width: 400px;
+    right: -40px;
+    bottom: -20px;
 }
