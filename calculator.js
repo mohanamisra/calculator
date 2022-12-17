@@ -63,7 +63,7 @@ for(let button of buttons){
 }
 
 function createOperatingElements(arrDisplayString){
-    finalArrDisplay = arrDisplayString.split(/[+-/*]/);
+    finalArrDisplay = arrDisplayString.split(/[\+\-\/\*]/);
     if(arrDisplayString.charAt(0) == '-'){
         finalArrDisplay.splice(0, 1);
         finalArrDisplay[0] = -finalArrDisplay[0];
@@ -74,7 +74,6 @@ function createOperatingElements(arrDisplayString){
     // if(finalArrDisplay[finalArrDisplay.length - 1] == '+' || finalArrDisplay[finalArrDisplay.length - 1] == '-' || finalArrDisplay[finalArrDisplay.length - 1] == '*' || finalArrDisplay[finalArrDisplay.length - 1] == '/'){
     //     finalArrDisplay.pop();
     // }
-    console.log(finalArrDisplay);
 
     let symbols = [];
     for(let element of arrDisplayString){
@@ -88,7 +87,6 @@ function createOperatingElements(arrDisplayString){
         symbols.shift();
     }
     // console.log(finalArrDisplay);
-    console.log(symbols);
 
     // operate(finalArrDisplay, symbols);
 
@@ -116,8 +114,8 @@ function operate(finalArrDisplay, symbols){
 }
 
 function calculate(symbol, n1, n2){
-    n1 = parseInt(n1);
-    n2 = parseInt(n2);
+    n1 = parseFloat(n1);
+    n2 = parseFloat(n2);
     switch(symbol){
         case '+':
             return n1+n2;
