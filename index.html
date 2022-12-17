@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel = "stylesheet" href = "style.css">
     <title>Calculator</title>
 </head>
@@ -15,29 +16,29 @@
             <img class = "sticker duo" src = "images/reginacady.png">
         </div>
         <div class="calculator-body">
-            <div class = "calculator-display">
-                <div class = "display-value">0</div>
+            <div class = "calculator-display text-wrap">
+                <div class = "display-value" id = "display-value">0</div>
             </div>
             <div class = "calculator-buttons">
-                <button class = "clear-button operation">AC</button>
-                <button class = "sign-button operation">+/-</button>
-                <button class = "percentage-button operation">%</button>
-                <button class = "division-button symbol">/</button>
-                <button class = "number-button">7</button>
-                <button class = "number-button">8</button>
-                <button class = "number-button">9</button>
-                <button class = "multiplication-button symbol">*</button>
-                <button class = "number-button">4</button>
-                <button class = "number-button">5</button>
-                <button class = "number-button">6</button>
-                <button class = "subtraction-button symbol">-</button>
-                <button class = "number-button">1</button>
-                <button class = "number-button">2</button>
-                <button class = "number-button">3</button>
-                <button class = "addition-button symbol">+</button>
-                <button class = "number-button">0</button>
-                <button class = "decimal-button operation">.</button>
-                <button class = "equals-button symbol">=</button>
+                <input type = "button" class = "clear-button button" value = "AC" id = "clear-button"></button>
+                <input type = "button" class = "sign-button operation button" value = "+/-"></button>
+                <input type = "button" class = "percentage-button operation button" value = "%"></button>
+                <input type = "button" class = "division-button symbol button simple" value = "/"></button>
+                <input type = "button" class = "number-button button simple" value = "7"></button>
+                <input type = "button" class = "number-button button simple" value = "8"></button>
+                <input type = "button" class = "number-button button simple" value = "9"></button>
+                <input type = "button" class = "multiplication-button symbol button simple" value = "*"></button>
+                <input type = "button" class = "number-button button simple" value = "4"></button>
+                <input type = "button" class = "number-button button simple" value = "5"></button>
+                <input type = "button" class = "number-button button simple" value = "6"></button>
+                <input type = "button" class = "subtraction-button symbol button simple" value = "-"></button>
+                <input type = "button" class = "number-button button simple" value = "1"></button>
+                <input type = "button" class = "number-button button simple" value = "2"></button>
+                <input type = "button" class = "number-button button simple" value = "3"></button>
+                <input type = "button" class = "addition-button symbol button simple" value = "+"></button>
+                <input type = "button" class = "number-button button simple" value = "0"></button>
+                <input type = "button" class = "decimal-button operation button simple" value = "."></button>
+                <input type = "button" class = "equals-button button" value = "=" id = "equals-button"></button>
             </div>
         </div>
         <div class = "right-images">
@@ -45,5 +46,6 @@
             <img class = "sticker damien" src = "images/damien.png">
         </div>
     </div>
+    <script src = "calculator.js"></script>
 </body>
 </html>
