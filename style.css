@@ -17,7 +17,7 @@
     }
 
     .calculator-buttons.all-buttons{
-        width: 510px;
+        width: 500px;
         margin: 20px;
     }
 
@@ -77,7 +77,7 @@ body {
 }
 
 .calculator-buttons{
-    width: 460px;
+    width: 450px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

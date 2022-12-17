@@ -5,7 +5,6 @@ let buttons = document.getElementsByTagName("input");
 let clearButton = document.getElementById("clear-button");
 let equalsButton = document.getElementById("equals-button");
 let percentageButton = document.getElementsByClassName("percentage-button")[0];
-let signButton = document.getElementsByClassName("sign-button")[0];
 let deleteButton = document.getElementsByClassName("delete-button")[0];
 
 let arrDisplay = [];
