@@ -23,11 +23,21 @@ for(let button of buttons){
             
             lastElement = arrDisplay[arrDisplay.length - 1];
             secondLastElement = arrDisplay[arrDisplay.length - 2];
-            if(((secondLastElement == '/' || secondLastElement == '*' || secondLastElement == '-' || secondLastElement == '+' || secondLastElement == '.') && (lastElement == '/' || lastElement == '*' || lastElement == '-' || lastElement == '+' || lastElement == '.')) || (arrDisplay.length > 10))
+            //THIS PREVENTS TYPING SYMBOLS CONSECUTIVELY
+            if(((secondLastElement == '/' || secondLastElement == '*' || secondLastElement == '-' || secondLastElement == '+' || secondLastElement == '.') && (lastElement == '/' || lastElement == '*' || lastElement == '-' || lastElement == '+' || lastElement == '.')) || (arrDisplay.length > 13)){
                 arrDisplay.pop();
+            }
+            //THIS PREVENTS BEGINNING WITH SYMBOLS OTHER THAN +/-
+            if(arrDisplay[0] == '*' || arrDisplay[0] == '/'){
+                arrDisplay.shift();
+            }
 
             arrDisplayString = arrDisplay.join("");
-            displayVal.innerHTML = arrDisplayString;
+            if(arrDisplayString.length == 0){
+                displayVal.innerHTML = "0";
+            }
+            else
+                displayVal.innerHTML = arrDisplayString;
 
             // finalArrDisplay = arrDisplayString.split(/[+-/*]/);
         }
@@ -51,13 +61,31 @@ for(let button of buttons){
 
 function createOperatingElements(arrDisplayString){
     finalArrDisplay = arrDisplayString.split(/[+-/*]/);
+    if(arrDisplayString.charAt(0) == '-'){
+        finalArrDisplay.splice(0, 1);
+        finalArrDisplay[0] = -finalArrDisplay[0];
+    }
+    else if(arrDisplayString.charAt(0) == '+'){
+        finalArrDisplay.splice(0, 1);
+    }
+    // if(finalArrDisplay[finalArrDisplay.length - 1] == '+' || finalArrDisplay[finalArrDisplay.length - 1] == '-' || finalArrDisplay[finalArrDisplay.length - 1] == '*' || finalArrDisplay[finalArrDisplay.length - 1] == '/'){
+    //     finalArrDisplay.pop();
+    // }
+    console.log(finalArrDisplay);
+
     let symbols = [];
     for(let element of arrDisplayString){
         if(isNaN(element))
             symbols.push(element);
     }
+    if(arrDisplayString.charAt(0) == '-'){
+        symbols.shift();
+    }
+    else if(arrDisplayString.charAt(0) == '+'){
+        symbols.shift();
+    }
     // console.log(finalArrDisplay);
-    // console.log(symbols);
+    console.log(symbols);
 
     // operate(finalArrDisplay, symbols);
 
