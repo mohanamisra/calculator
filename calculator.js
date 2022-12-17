@@ -52,6 +52,7 @@ for(let button of buttons){
         }
         if(button === deleteButton){
             arrDisplayString = arrDisplayString.slice(0, -1); //REMOVING THE LAST CHARACTER, AKA DELETING OR BACKSPACING
+            arrDisplay.pop();
             displayVal.innerHTML = arrDisplayString;
         }
         if(button === equalsButton){
