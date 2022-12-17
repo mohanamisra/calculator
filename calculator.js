@@ -6,6 +6,7 @@ let clearButton = document.getElementById("clear-button");
 let equalsButton = document.getElementById("equals-button");
 let percentageButton = document.getElementsByClassName("percentage-button")[0];
 let signButton = document.getElementsByClassName("sign-button")[0];
+let deleteButton = document.getElementsByClassName("delete-button")[0];
 
 let arrDisplay = [];
 let arrDisplayString;
@@ -38,8 +39,6 @@ for(let button of buttons){
             }
             else
                 displayVal.innerHTML = arrDisplayString;
-
-            // finalArrDisplay = arrDisplayString.split(/[+-/*]/);
         }
         if(button === clearButton){
             displayVal.innerHTML = "0";
@@ -49,6 +48,10 @@ for(let button of buttons){
             arrDisplay.pop();
             arrDisplay.push(displayVal.innerHTML/100);
             arrDisplayString = arrDisplay.join("");
+            displayVal.innerHTML = arrDisplayString;
+        }
+        if(button === deleteButton){
+            arrDisplayString = arrDisplayString.slice(0, -1); //REMOVING THE LAST CHARACTER, AKA DELETING OR BACKSPACING
             displayVal.innerHTML = arrDisplayString;
         }
         if(button === equalsButton){
@@ -75,7 +78,7 @@ function createOperatingElements(arrDisplayString){
 
     let symbols = [];
     for(let element of arrDisplayString){
-        if(isNaN(element))
+        if(isNaN(element) && element != '.')
             symbols.push(element);
     }
     if(arrDisplayString.charAt(0) == '-'){
