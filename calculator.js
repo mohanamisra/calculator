@@ -29,7 +29,7 @@ for(let button of buttons){
             arrDisplayString = arrDisplay.join("");
             displayVal.innerHTML = arrDisplayString;
 
-            finalArrDisplay = arrDisplayString.split(/[+-/*]/);
+            // finalArrDisplay = arrDisplayString.split(/[+-/*]/);
         }
         if(button === clearButton){
             displayVal.innerHTML = "0";
@@ -42,7 +42,59 @@ for(let button of buttons){
             displayVal.innerHTML = arrDisplayString;
         }
         if(button === equalsButton){
-            console.log(finalArrDisplay);
+            let a = createOperatingElements(arrDisplayString);
+            let finalResult = operate(a.finalArrDisplay, a.symbols);
+            displayVal.innerHTML = finalResult;
         }
     });
+}
+
+function createOperatingElements(arrDisplayString){
+    finalArrDisplay = arrDisplayString.split(/[+-/*]/);
+    let symbols = [];
+    for(let element of arrDisplayString){
+        if(isNaN(element))
+            symbols.push(element);
+    }
+    // console.log(finalArrDisplay);
+    // console.log(symbols);
+
+    // operate(finalArrDisplay, symbols);
+
+    return {
+        finalArrDisplay: finalArrDisplay,
+        symbols: symbols,
+    };
+}
+
+function operate(finalArrDisplay, symbols){
+    let arrNumbers = Array.from(finalArrDisplay);
+    let arrSymbols = Array.from(symbols);
+    let result = arrNumbers[0];
+
+    let numLength = arrNumbers.length;
+    // let symbolsLength = arrSymbols.length;
+
+    for(let i = 1; i < numLength; i++){
+        let num1 = result;
+        let num2 = arrNumbers[i];
+        result = calculate(arrSymbols[i-1], num1, num2);
+    }
+    console.log(result);
+    return result;
+}
+
+function calculate(symbol, n1, n2){
+    n1 = parseInt(n1);
+    n2 = parseInt(n2);
+    switch(symbol){
+        case '+':
+            return n1+n2;
+        case '-':
+            return n1-n2;
+        case '*':
+            return n1*n2;
+        case '/':
+            return n1/n2;
+    }
 }
