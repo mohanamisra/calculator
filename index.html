@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class = "notranslate" translate = "no">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,8 @@
     <title>Calculator</title>
 </head>
 <body>
+    <audio autoplay src = "music/backgroundmusic.mp3" id = "audio">
+    </audio>
     <div class = "container">
         <div class = "right-images">
             <img class = "sticker mom" src = "images/coolmom.png">
@@ -45,7 +47,18 @@
             <img class = "sticker karen" src = "images/karen.png">
             <img class = "sticker damien" src = "images/damien.png">
         </div>
+        <!-- <footer class = "footer bg-dark text-light" id = "footer">
+            <div class = "code">The Code is very Fetch!</div>
+            <div class = "author">	&#169;Made by Mohana Misra 2022</div>
+            <div class = "audio-button">Play/Pause Audio</div>
+        </footer> -->
     </div>
+    <footer class = "footer bg-dark text-light p-3" id = "footer">
+        <div class = "author">	&#169; Made by Mohana Misra 2022</div>
+        <div class = "audio-button" id = "audio-button">Play/Pause Audio</div>
+    </footer>
     <script src = "calculator.js"></script>
+    <script src = "audioplay.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

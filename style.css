@@ -108,3 +108,11 @@ body {
     right: -40px;
     bottom: -20px;
 }
+
+#footer{
+    font-family: monospace, system-ui;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    align-self: flex-end;
+}
