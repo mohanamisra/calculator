@@ -33,9 +33,14 @@ body {
 }
 
 .display-value{
+    text-align: right;
     font-family: 'Press Start 2P', monospace, system-ui;
     font-size: 60px;
     margin: 10px;
+    inline-size: 550px;
+    overflow-wrap: break-word;
+    max-height: 200px;
+    overflow-y: hidden;
 }
 
 .calculator-buttons{
